@@ -21,6 +21,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@CrossOrigin=(origins="http://ec2-13-233-251-211.ap-south-1.compute.amazonaws.com:8000")
+
 @RestController
 @RequestMapping("/api")
 public class XfsController {  
