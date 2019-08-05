@@ -51,13 +51,13 @@ pipeline{
    success {
           script{
               d='{"id":"'+JOB_NAME+'","bNumber":"'+BUILD_NUMBER+'","bUrl":"'+BUILD_URL+'","buildStatus":"SUCCESS"}'
-              sh "curl -H 'Content-Type: application/json' -X POST -d '${d}'  http://ec2-13-233-251-211.ap-south-1.compute.amazonaws.com:8080/Backend_XFS/postKSR"
+              sh "curl -H 'Content-Type: application/json' -X POST -d '${d}'  http://ec2-13-233-251-211.ap-south-1.compute.amazonaws.com:8080/Backend_XFS/api/postKSR2"
           }
    }
          failure {
             script{
               d='{"id":"'+JOB_NAME+'","bNumber":"'+BUILD_NUMBER+'","bUrl":"'+BUILD_URL+'","buildStatus":"FAILURE"}'
-              sh "curl -H 'Content-Type: application/json' -X POST -d '${d}'  http://ec2-13-233-251-211.ap-south-1.compute.amazonaws.com:8080/Backend_XFS/postKSR"
+              sh "curl -H 'Content-Type: application/json' -X POST -d '${d}'  http://ec2-13-233-251-211.ap-south-1.compute.amazonaws.com:8080/Backend_XFS/api/postKSR2"
           }
          }
 }
